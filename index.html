@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>og.alik · videomaker</title>
+<meta name="description" content="Alik (@og.alik), videomaker em São Paulo. Reels, efeitos e cobertura ao vivo — já filmou a Recayd Mob no festival Planeta Urbano. Eventos, artistas no palco e marcas.">
+<meta property="og:title" content="og.alik · videomaker">
+<meta property="og:description" content="e transforme seus conteúdos em vídeos atrativos e dinâmicos.">
+<meta property="og:image" content="video/recayd.jpg">
+<meta name="theme-color" content="#0a0a0c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0c'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%23ff3b30'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preload" as="video" href="video/recayd.mp4">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-loading">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="tiktok" viewBox="0 0 24 24"><path d="M14 3c.5 2.6 2 4.2 4.6 4.5v3c-1.7 0-3.2-.5-4.6-1.5v6.4A5.6 5.6 0 1 1 8.5 9.9v3.2a2.5 2.5 0 1 0 2.4 2.5V3H14z" fill="currentColor"/></symbol>
+  <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 6l8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="whats" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 7.6c.3-.6.6-.6.9-.6h.6c.2 0 .5 0 .7.5s.8 2 .9 2.1c.1.2.1.4 0 .6-.1.2-.2.3-.4.5l-.5.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.2 2.3 1.5 2.7 1.7.3.1.5.1.7-.1l.7-.8c.2-.3.5-.2.7-.1l1.8.9c.3.1.4.2.5.3.1.2.1 1-.3 1.6-.4.6-1.7 1.2-2.4 1.2-.6 0-2.5-.2-4.7-2.2-2.7-2.4-3.4-4.6-3.5-4.9-.1-.3-.9-1.6-.9-3 0-1.4.7-2.1 1-2.3z" fill="currentColor"/></symbol>
+  <symbol id="play" viewBox="0 0 24 24"><path d="M7 4l14 8-14 8V4z" fill="currentColor"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></symbol>
+  <symbol id="copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 8V4H4v12h4" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+</svg>
+
+<!-- ============ ABERTURA: render de export ============ -->
+<div class="loader" aria-hidden="true">
+  <div class="loader__top">
+    <span>og.alik</span><span>videomaker.mp4</span>
+  </div>
+  <h2 class="loader__name"><span>ALIK</span></h2>
+  <div class="loader__row">
+    <div class="loader__bar"><i data-load-bar></i></div>
+    <b class="loader__pct"><span data-load-count>0</span>%</b>
+  </div>
+  <p class="loader__hint">renderizando portfólio…</p>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"><b data-cursor-label></b></span></div>
+
+<header class="nav" data-nav>
+  <a href="#top" class="nav__brand"><span class="rec" aria-hidden="true"></span>og.alik</a>
+  <nav class="nav__links" aria-label="Principal">
+    <a href="#recayd">Recayd Mob</a>
+    <a href="#filmo">Filmo</a>
+    <a href="#estudio">Showreel</a>
+    <a href="#bastidores">Bastidores</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <div class="nav__status"><span>SP, BR</span><b class="clock" data-clock>--:--</b></div>
+  <a href="#contato" class="btn btn--sm nav__cta" data-magnetic>Mandar proposta</a>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" data-hero>
+    <div class="hero__media">
+      <video data-hero-video src="video/recayd.mp4" poster="video/recayd.jpg" muted loop playsinline autoplay preload="auto"></video>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__scan" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero__hud">
+      <div class="hud__top">
+        <span class="hud__rec"><b class="rec"></b> filmando ao vivo</span>
+      </div>
+
+      <div class="hero__body">
+        <figure class="hero__portrait">
+          <img src="img/rockstar-04.jpg" width="1440" height="1920" alt="Alik, videomaker">
+        </figure>
+        <div class="hero__id">
+          <p class="tag"><span class="tag__dot"></span> videomaker · são paulo, br</p>
+          <h1 class="hero__h1">ALIK</h1>
+          <p class="hero__role">videoclipes, reels <mark>&amp; lifestyle.</mark></p>
+          <div class="hero__cta">
+            <a href="#contato" class="btn btn--red" data-magnetic><svg><use href="#whats"/></svg> mandar no whatsapp</a>
+            <a href="#recayd" class="btn btn--ghost" data-magnetic>recayd mob no palco <svg><use href="#arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- faixa -->
+  <div class="tape" aria-hidden="true">
+    <div class="tape__track" data-tape>
+      <span>RECAYD MOB</span><i>✦</i><span>EVENTOS</span><i>✦</i><span>ARTISTAS NO PALCO</span><i>✦</i><span>MARCAS</span><i>✦</i><span>#CAPCUT</span><i>✦</i><span>#EDICAODEVIDEO</span><i>✦</i>
+      <span>RECAYD MOB</span><i>✦</i><span>EVENTOS</span><i>✦</i><span>ARTISTAS NO PALCO</span><i>✦</i><span>MARCAS</span><i>✦</i><span>#CAPCUT</span><i>✦</i><span>#EDICAODEVIDEO</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ============ MANIFESTO ============ -->
+  <section class="manifesto" data-manifesto>
+    <div class="wrap manifesto__grid">
+      <p class="label"><span>01</span><span>manifesto</span></p>
+      <p class="manifesto__text" data-scrub>e transforme seus conteúdos em <mark>vídeos atrativos</mark> e <mark>dinâmicos.</mark></p>
+      <figure class="manifesto__clip">
+        <video src="video/motion.mp4" poster="video/motion.jpg" muted loop playsinline preload="metadata"></video>
+        <figcaption><b>motion</b><span>roupas: @rabelostore.review</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ RECAYD MOB (projeto) ============ -->
+  <section class="projeto" id="recayd">
+    <div class="projeto__media">
+      <video src="video/recayd.mp4" poster="video/recayd.jpg" muted loop playsinline preload="metadata" data-cursor="Play"></video>
+      <div class="projeto__shade" aria-hidden="true"></div>
+    </div>
+    <div class="wrap projeto__grid">
+      <div class="projeto__copy">
+        <p class="label"><span>02</span><span>projeto</span></p>
+        <h2 class="big">recayd mob<br><mark>no palco.</mark></h2>
+        <p class="projeto__lead">festival planeta urbano: derek e jé dividindo o microfone, sinalizador aceso, multidão até onde a lente alcança. eu tava lá com a câmera.</p>
+        <ul class="projeto__stats">
+          <li><b>11,2 mil</b><span>curtidas no reel</span></li>
+          <li><b>366 mil</b><span>seguidores @recayd</span></li>
+          <li><b>bastidor</b><span>máscara de ninja antes de subir</span></li>
+        </ul>
+        <a href="https://www.instagram.com/recayd/reel/DRdoQc8Da03/" target="_blank" rel="noopener" class="link">ver o reel original <svg><use href="#arrow"/></svg></a>
+      </div>
+      <figure class="projeto__crew">
+        <img src="img/recayd-portrait.jpg" width="1440" height="1800" loading="lazy" alt="Recayd Mob posando à noite num estacionamento">
+        <figcaption><b>recayd mob</b><span>derek · jé · mc igu · efideliz · dj luketa</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ FILMO (horizontal) ============ -->
+  <section class="filmo" id="filmo" data-filmo>
+    <div class="filmo__pin">
+      <div class="filmo__track" data-track>
+
+        <div class="panel panel--intro">
+          <p class="label label--light"><span>03</span><span>o que eu filmo</span></p>
+          <h2 class="big">eventos, artistas<br><mark>e marcas.</mark></h2>
+          <ul class="panel__tags">
+            <li>#CAPCUT</li><li>#AUDIOVISUAL</li><li>#TUTORIAL</li><li>#EDICAODEVIDEO</li>
+          </ul>
+        </div>
+
+        <article class="panel panel--card">
+          <span class="panel__no">01</span>
+          <h3>EVENTOS</h3>
+          <p>congresso, festa, show, rolê de madrugada — eu tô lá com a câmera e saio com o corte pronto.</p>
+        </article>
+
+        <figure class="panel panel--media" data-cursor="Play">
+          <span class="panel__no">02/06</span>
+          <div class="panel__frame"><video src="video/jump.mp4" poster="video/jump.jpg" muted loop playsinline preload="metadata" data-par></video></div>
+          <figcaption><b>@OG.ALIK</b><span>fotos: @fleury_cat</span></figcaption>
+        </figure>
+
+        <article class="panel panel--card panel--red">
+          <span class="panel__kanji" aria-hidden="true">GANG</span>
+          <h3>ARTISTAS<br>NO PALCO</h3>
+          <p>recayd mob no festival planeta urbano — artista sobe no palco, eu fico de olho no timing e edito o momento que todo mundo vai querer rever.</p>
+          <a href="#recayd" class="link link--sm">ver o projeto <svg><use href="#arrow"/></svg></a>
+        </article>
+
+        <figure class="panel panel--media panel--tall" data-cursor="Play">
+          <span class="panel__no">03/06</span>
+          <div class="panel__frame"><video src="video/recayd.mp4" poster="video/recayd.jpg" muted loop playsinline preload="metadata" data-par></video></div>
+          <figcaption><b>RECAYD MOB</b><span>festival planeta urbano</span></figcaption>
+        </figure>
+
+        <article class="panel panel--card">
+          <span class="panel__no">03</span>
+          <h3>MARCAS</h3>
+          <p>marca lança o produto, eu componho a cena — do unboxing ao vídeo que vira publi de verdade.</p>
+        </article>
+
+        <article class="panel panel--card panel--ghost">
+          <span class="panel__kanji" aria-hidden="true">✎</span>
+          <h3>o pitch</h3>
+          <p>“e transforme seus conteúdos em vídeos atrativos e dinâmicos.”</p>
+          <a href="#contato" class="link">mandar proposta <svg><use href="#arrow"/></svg></a>
+        </article>
+
+      </div>
+      <div class="filmo__bar" aria-hidden="true"><i data-filmo-bar></i></div>
+    </div>
+  </section>
+
+  <!-- ============ SHOWREEL / ESTÚDIO ============ -->
+  <section class="estudio" id="estudio">
+    <div class="wrap estudio__head">
+      <p class="label"><span>04</span><span>showreel</span></p>
+      <h2 class="big">o estúdio é a<br><mark>sala de casa.</mark></h2>
+      <p class="estudio__sub">três truques de edição, um sofá só, um pôster de nova york na parede. renderizado, postado, viral.</p>
+    </div>
+    <div class="estudio__grid">
+      <figure class="reel" data-cursor="Play">
+        <a href="https://www.instagram.com/og.alik/reel/DeMqrTts9-X/" target="_blank" rel="noopener">
+          <video src="video/clone.mp4" poster="video/clone.jpg" muted loop playsinline preload="metadata"></video>
+        </a>
+        <figcaption><b>tutorial efeito clone</b><span>#capcut #audiovisual #tutorial #edicaodevideo</span><span class="n">3.511 curtidas</span></figcaption>
+      </figure>
+      <figure class="reel" data-cursor="Play">
+        <a href="https://www.instagram.com/og.alik/reel/DeFtaAtMNEo/" target="_blank" rel="noopener">
+          <video src="video/flash.mp4" poster="video/flash.jpg" muted loop playsinline preload="metadata"></video>
+        </a>
+        <figcaption><b>tutorial efeito flash</b><span>#tutorial #edicaodevideo #capcut #audiovisual</span><span class="n">1.549 curtidas</span></figcaption>
+      </figure>
+      <figure class="reel" data-cursor="Play">
+        <a href="https://www.instagram.com/og.alik/reel/Dec1Y7WMHHs/" target="_blank" rel="noopener">
+          <video src="video/ventilador.mp4" poster="video/ventilador.jpg" muted loop playsinline preload="metadata"></video>
+        </a>
+        <figcaption><b>tutorial trend ventilador</b><span>#capcut #mobile #audiovisual #tutorial</span><span class="n">241 curtidas</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ BASTIDORES (cartas empilhadas) ============ -->
+  <section class="bastidores" id="bastidores">
+    <div class="wrap">
+      <header class="bastidores__head">
+        <p class="label"><span>05</span><span>bastidores</span></p>
+        <h2 class="big big--dark">quem já entrou<br><mark>no quadro.</mark></h2>
+      </header>
+    </div>
+    <div class="stack">
+      <article class="scard" data-scard>
+        <div class="scard__copy">
+          <span class="scard__eyebrow">fotos by @x2clout</span>
+          <h3>ROCKSTAR</h3>
+          <p>“experience feeling like jimi hendrix + saint.” still de still, camiseta estampada, tênis plataforma branco.</p>
+        </div>
+        <div class="scard__collage">
+          <img src="img/rockstar-04.jpg" width="1440" height="1920" loading="lazy" alt="Alik posando de camiseta Unloved Saint">
+          <img src="img/rockstar-00.jpg" width="1440" height="1920" loading="lazy" alt="Alik arrumando as camisetas Rockstar">
+          <img src="img/rockstar-02.jpg" width="1440" height="1920" loading="lazy" alt="Detalhe das camisetas estampadas">
+        </div>
+      </article>
+
+      <article class="scard" data-scard>
+        <div class="scard__copy">
+          <span class="scard__eyebrow">acessórios: @garimpodeouro · roupas: @takeoffcollection · fotos: @fleury_cat</span>
+          <h3>SLAY</h3>
+          <p>cabelo vermelho voando, taco de ferro na mão, fundo de ferro-velho — moda de rua com contraste industrial.</p>
+        </div>
+        <div class="scard__collage">
+          <video src="video/jump.mp4" poster="video/jump.jpg" muted loop playsinline preload="metadata" aria-label="Alik saltando com um taco de ferro no fundo industrial"></video>
+          <img src="img/slay-00.jpg" width="1440" height="1440" loading="lazy" alt="Alik com os dreads vermelhos em movimento">
+          <img src="img/slay-03.jpg" width="1440" height="1440" loading="lazy" alt="Still do ensaio slay">
+        </div>
+      </article>
+
+      <article class="scard" data-scard>
+        <div class="scard__copy">
+          <span class="scard__eyebrow">“i stay out the way”</span>
+          <h3>DE NOITE, NA SACADA</h3>
+          <p>são paulo lá embaixo, corrente de prata, risada escondida atrás da mão — lifestyle sem precisar de holofote.</p>
+        </div>
+        <div class="scard__collage">
+          <img src="img/stayout-00.jpg" width="3024" height="4032" loading="lazy" alt="Alik rindo numa sacada à noite em São Paulo">
+          <img src="img/stayout-06.jpg" width="3024" height="4032" loading="lazy" alt="Still da noite">
+          <img src="img/stayout-02.jpg" width="2897" height="3862" loading="lazy" alt="Still da noite, close">
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE ============ -->
+  <section class="about" id="sobre">
+    <div class="wrap about__grid">
+      <figure class="about__photo" data-tilt>
+        <img src="img/rockstar-04.jpg" width="1440" height="1920" loading="lazy" alt="Retrato de Alik, videomaker">
+        <span class="about__sticker"><b class="rec"></b> on set</span>
+      </figure>
+      <div class="about__copy">
+        <p class="label"><span>06</span><span>quem edita</span></p>
+        <h2 class="about__name">Alik</h2>
+        <p class="about__lead">videomaker · são paulo, br.<br>videoclipes, reels &amp; lifestyle.</p>
+        <ul class="about__facts">
+          <li><span>Instagram</span><b>@og.alik · 4.714</b></li>
+          <li><span>Base</span><b>São Paulo, BR</b></li>
+          <li><span>Já rodou com</span><b>Recayd Mob · Festival Planeta Urbano</b></li>
+          <li><span>Filmo</span><b>Eventos · Artistas no palco · Marcas</b></li>
+          <li><span>Edito em</span><b>CapCut · efeitos e tendências</b></li>
+          <li><span>Contato</span><b>alikmaker8@gmail.com</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEED ============ -->
+  <section class="feed">
+    <div class="wrap feed__head">
+      <div>
+        <p class="label label--light"><span>07</span><span>feed</span></p>
+        <h2 class="big">direto do<br><mark>instagram.</mark></h2>
+      </div>
+      <a href="https://www.instagram.com/og.alik/" class="link" target="_blank" rel="noopener"><svg><use href="#ig"/></svg> seguir @og.alik</a>
+    </div>
+    <div class="feed__rail" data-rail tabindex="0" aria-label="Publicações recentes do Instagram">
+      <div class="feed__track" data-rail-track>
+        <a class="post" href="https://www.instagram.com/og.alik/p/DRChkVDlp0E/" target="_blank" rel="noopener"><img src="img/slay-01.jpg" width="1440" height="1440" loading="lazy" alt="slay"></a>
+        <a class="post" href="https://www.instagram.com/og.alik/p/DV_6O8rlild/" target="_blank" rel="noopener"><img src="img/rockstar-01.jpg" width="1440" height="1920" loading="lazy" alt="rockstar"></a>
+        <a class="post" href="https://www.instagram.com/og.alik/p/DZVZy2JltKi/" target="_blank" rel="noopener"><img src="img/stayout-01.jpg" width="3072" height="4096" loading="lazy" alt="i stay out the way"></a>
+        <a class="post" href="https://www.instagram.com/og.alik/p/DUBLR9-DtU_/" target="_blank" rel="noopener"><img src="img/basic-00.jpg" width="1440" height="1440" loading="lazy" alt="basic"></a>
+        <a class="post" href="https://www.instagram.com/og.alik/p/DXAhN5xFrdI/" target="_blank" rel="noopener"><video src="video/motion.mp4" poster="video/motion.jpg" muted loop playsinline preload="none"></video></a>
+        <a class="post" href="https://www.instagram.com/og.alik/p/DR2_2nIjEMX/" target="_blank" rel="noopener"><img src="img/iknow-00.jpg" width="1440" height="1440" loading="lazy" alt="i know!"></a>
+        <a class="post" href="https://www.instagram.com/og.alik/p/DObPtMekc-A/" target="_blank" rel="noopener"><img src="img/skull-00.jpg" width="1440" height="1440" loading="lazy" alt="post caveira"></a>
+        <a class="post" href="https://www.instagram.com/og.alik/p/DMnky5hs6zA/" target="_blank" rel="noopener"><img src="img/night-00.jpg" width="1440" height="1440" loading="lazy" alt="slay, noite"></a>
+        <a class="post" href="https://www.instagram.com/og.alik/reel/Dec1Y7WMHHs/" target="_blank" rel="noopener"><video src="video/ventilador.mp4" poster="video/ventilador.jpg" muted loop playsinline preload="none"></video></a>
+        <a class="post" href="https://www.instagram.com/og.alik/p/DXPmHrIlrR5/" target="_blank" rel="noopener"><img src="img/noname-00.jpg" width="1440" height="1920" loading="lazy" alt="post sem legenda"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTATO ============ -->
+  <section class="drop" id="contato">
+    <div class="wrap">
+      <header class="drop__head">
+        <p class="label"><span>08</span><span>bora gravar</span></p>
+        <h2 class="big big--dark">monta o <mark>projeto.</mark></h2>
+        <p class="drop__sub">tipo de job, o que rola e quando. a mensagem sai pronta pro whatsapp do alik.</p>
+      </header>
+
+      <div class="drop__grid">
+        <form class="form" data-form novalidate>
+          <fieldset class="field field--chips">
+            <legend><b>A</b> tipo de job</legend>
+            <div class="chips" data-chips="tipo">
+              <label><input type="radio" name="tipo" value="um vídeo de evento" checked><span>evento</span></label>
+              <label><input type="radio" name="tipo" value="um vídeo com artista no palco"><span>artista no palco</span></label>
+              <label><input type="radio" name="tipo" value="um vídeo pra marca"><span>marca</span></label>
+              <label><input type="radio" name="tipo" value="um vídeo de tendência estilo capcut"><span>vídeo de tendência</span></label>
+            </div>
+          </fieldset>
+          <div class="form__row">
+            <label class="field">
+              <span><b>B</b> seu nome</span>
+              <input name="nome" autocomplete="name" required placeholder="quem tá chamando">
+            </label>
+            <label class="field">
+              <span><b>C</b> marca / projeto <small>(opcional)</small></span>
+              <input name="marca" autocomplete="organization" placeholder="nome da marca ou artista">
+            </label>
+          </div>
+          <label class="field">
+            <span><b>D</b> a ideia <small>(opcional)</small></span>
+            <textarea name="ideia" rows="3" placeholder="data, cidade, o que vocês imaginam…"></textarea>
+          </label>
+          <p class="form__err" data-err role="alert"></p>
+          <div class="form__actions">
+            <button class="btn btn--red btn--full" type="submit" data-magnetic><svg><use href="#whats"/></svg> enviar no whatsapp</button>
+            <a class="btn btn--ghost" href="#" data-mailto target="_blank" rel="noopener"><svg><use href="#mail"/></svg> mandar e-mail</a>
+          </div>
+        </form>
+
+        <div class="monitor">
+          <div class="monitor__bar"><span class="rec"></span><b>preview</b><i data-mon-tc>00:00:00:00</i></div>
+          <div class="monitor__body">
+            <p class="monitor__row"><span>tipo</span><b data-mon="tipo">evento</b></p>
+            <p class="monitor__row"><span>marca</span><b data-mon="marca">—</b></p>
+            <p class="monitor__row"><span>de</span><b data-mon="nome">—</b></p>
+            <p class="monitor__row monitor__row--msg"><span>msg</span><b data-mon="msg">oi alik! bora gravar um vídeo de evento.</b></p>
+          </div>
+          <div class="monitor__foot">
+            <span>@og.alik</span>
+            <button type="button" class="direct" data-copy="alikmaker8@gmail.com"><svg><use href="#copy"/></svg> <span>alikmaker8@gmail.com</span> <small data-copy-msg>copiar</small></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__big" aria-hidden="true"><span>OG.</span><span>ALIK</span></div>
+  <div class="wrap foot__grid">
+    <p class="foot__creds">videomaker · videoclipes, reels &amp; lifestyle<br>eventos · artistas no palco · marcas<br>são paulo, br</p>
+    <div class="foot__links">
+      <a href="https://wa.me/5511959436314" target="_blank" rel="noopener"><svg><use href="#whats"/></svg> whatsapp</a>
+      <a href="mailto:alikmaker8@gmail.com"><svg><use href="#mail"/></svg> alikmaker8@gmail.com</a>
+      <a href="https://www.instagram.com/og.alik/" target="_blank" rel="noopener"><svg><use href="#ig"/></svg> @og.alik</a>
+      <a href="https://www.tiktok.com/@og.alik" target="_blank" rel="noopener"><svg><use href="#tiktok"/></svg> tiktok</a>
+      <a href="#top">voltar ao topo ↑</a>
+    </div>
+  </div>
+  <p class="wrap foot__base">© <span data-year>2026</span> og.alik</p>
+</footer>
+
+<a href="https://wa.me/5511959436314" class="float" aria-label="Chamar no WhatsApp" target="_blank" rel="noopener"><svg><use href="#whats"/></svg></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="main.js" defer></script>
+</body>
+</html>

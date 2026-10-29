@@ -33,6 +33,22 @@
   }), { rootMargin: '150px 0px', threshold: .1 });
   $$('video').forEach(v => { if (v !== heroVideo) vio.observe(v); });
 
+  /* ---------- clipes: toca o youtube ao clicar ---------- */
+  $$('.clipe__play').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.closest('[data-clipe]')?.dataset.clipe;
+      if (!id) return;
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      iframe.title = btn.getAttribute('aria-label') || 'YouTube video';
+      iframe.allow = 'accelerate; autoplay; encrypted-media; picture-in-picture';
+      iframe.allowFullscreen = true;
+      btn.replaceChildren(iframe);
+      btn.disabled = true;
+      btn.style.cursor = 'default';
+    }, { once: true });
+  });
+
   /* ---------- cursor + magnético ---------- */
   if (fine && !reduce) {
     document.documentElement.classList.add('has-cursor');
@@ -226,6 +242,10 @@
     });
   });
   gsap.to('.manifesto__clip', { opacity: 1, duration: .3, scrollTrigger: { trigger: '.manifesto', start: 'top 60%' } });
+
+  /* ---------- videoclipes ---------- */
+  gsap.from('.clipes__head > *', { y: 30, opacity: 0, stagger: .08, duration: .8, ease: 'power3.out', scrollTrigger: { trigger: '.clipes', start: 'top 75%' } });
+  gsap.from('.clipe', { y: 60, opacity: 0, stagger: .1, duration: .9, ease: 'power3.out', scrollTrigger: { trigger: '.clipes__grid', start: 'top 82%' } });
 
   /* ---------- projeto: recayd mob ---------- */
   gsap.from('.projeto__copy > *', { y: 40, opacity: 0, stagger: .08, duration: .9, ease: 'power3.out', scrollTrigger: { trigger: '.projeto', start: 'top 60%' } });

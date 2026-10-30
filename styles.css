@@ -231,7 +231,6 @@ mark { background: none; color: inherit; }
 .bastidores__head { margin-bottom: clamp(36px, 5vw, 64px); }
 .stack { display: grid; gap: 0; padding: 0 var(--pad); }
 .scard { position: sticky; top: 7vh; display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(24px, 4vw, 60px); align-items: center; min-height: 78vh; margin: 0 auto 6vh; width: min(1280px, 100%); padding: clamp(26px, 4vw, 52px); overflow: hidden; border: 2px solid var(--ink); background: var(--paper); will-change: transform; }
-.scard__eyebrow { display: block; font: 700 11px/1.5 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--red-d); margin-bottom: 12px; }
 .scard h3 { margin: 0 0 16px; font: 400 clamp(60px, 9vw, 150px)/.96 var(--display); letter-spacing: 0; }
 .scard p { margin: 0; max-width: 38ch; font-size: 16px; line-height: 1.6; }
 .scard__collage { position: relative; height: min(66vh, 580px); }

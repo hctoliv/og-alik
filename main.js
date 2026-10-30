@@ -267,18 +267,6 @@
   /* ---------- estúdio: reels sobem ---------- */
   gsap.from('.reel', { y: 60, opacity: 0, stagger: .1, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.estudio__grid', start: 'top 82%' } });
 
-  /* ---------- bastidores: cartas empilhadas ---------- */
-  const scards = $$('[data-scard]');
-  scards.forEach((c, i) => {
-    const next = scards[i + 1];
-    if (next) gsap.fromTo(c, { scale: 1, filter: 'brightness(1)' }, {
-      scale: .92, filter: 'brightness(.6)', ease: 'none',
-      scrollTrigger: { trigger: next, start: 'top bottom', end: 'top 12%', scrub: true }
-    });
-    gsap.from($$('.scard__collage > *', c), { y: 100, opacity: 0, rotate: (k) => [-10, 8, -6][k] || 0, stagger: .1, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: c, start: 'top 75%' } });
-    gsap.from($$('.scard__copy > *', c), { y: 40, opacity: 0, stagger: .06, duration: .8, ease: 'power3.out', scrollTrigger: { trigger: c, start: 'top 75%' } });
-  });
-
   /* ---------- sobre: entrada ---------- */
   gsap.from('.about__photo', { y: 60, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.about', start: 'top 75%' } });
   gsap.from('.about__facts li', { x: -20, opacity: 0, stagger: .06, duration: .7, ease: 'power3.out', scrollTrigger: { trigger: '.about__facts', start: 'top 85%' } });
